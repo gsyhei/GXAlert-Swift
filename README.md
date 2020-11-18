@@ -5,10 +5,10 @@ Swift版本基于UIView的菜单效果分类
 <img src="https://github.com/gsyhei/GXCardView-Swift/blob/master/QQ.jpeg">
 </p>
 
-先上Demo效果图
+Sample renderings
 --
 <p align="center">
-<img src="https://github.com/gsyhei/GXAlert-Swift/blob/master/GXAlert.gif">
+<img src="https://github.com/gsyhei/GXAlert-Swift/blob/main/GXAlert.gif">
 </p>
 
 Requirements
