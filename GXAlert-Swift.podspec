@@ -9,14 +9,14 @@
 Pod::Spec.new do |s|
 
   s.name          = "GXAlert-Swift"
-  s.version       = "1.0.0"
+  s.version       = "1.0.1"
   s.swift_version = "5.0"
   s.summary       = "基于UIView的菜单效果分类"
   s.homepage      = "https://github.com/gsyhei/GXAlert-Swift"
   s.license       = { :type => "MIT", :file => "LICENSE" }
   s.author        = { "Gin" => "279694479@qq.com" }
-  s.platform      = :ios, "9.0"
-  s.source        = { :git => "https://github.com/gsyhei/GXAlert-Swift.git", :tag => "1.0.0" }
+  s.platform      = :ios, "13.0"
+  s.source        = { :git => "https://github.com/gsyhei/GXAlert-Swift.git", :tag => "1.0.1" }
   s.requires_arc  = true
   s.source_files  = "GXAlert-Swift"
   s.frameworks    = "UIKit"

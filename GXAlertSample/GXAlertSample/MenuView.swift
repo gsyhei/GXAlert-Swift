@@ -29,6 +29,10 @@ class MenuView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    deinit {
+        NSLog("MenuView deinit")
+    }
 }
 
 extension MenuView: UITableViewDataSource, UITableViewDelegate {
