@@ -37,10 +37,7 @@ public class GXAlertManager: NSObject {
         self.style = style
 
         if self.superview == nil {
-            self.superview = UIApplication.shared.windows.first
-            if self.superview == nil {
-                self.superview = UIApplication.shared.delegate?.window as? UIView
-            }
+            self.superview = self.getProperWindow()
         }
         guard self.superview != nil else { fatalError("GXAlert superview is nil.") }
         self.backgroundView.frame = self.superview!.bounds
@@ -149,7 +146,21 @@ public class GXAlertManager: NSObject {
             self.dismissBlock!()
         }
     }
-
+    
+    func getProperWindow() -> UIWindow? {
+        if let mainWindow = UIApplication.shared.windows.first(where: {
+            $0.isKeyWindow && $0.windowScene?.activationState == .foregroundActive
+        }) {
+            return mainWindow
+        }
+        if let foregroundWindow = UIApplication.shared.windows.first(where: {
+            $0.windowScene?.activationState == .foregroundActive
+        }) {
+            return foregroundWindow
+        }
+        return UIApplication.shared.windows.first
+    }
+    
 }
 
 public extension GXAlertManager {
